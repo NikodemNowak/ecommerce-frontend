@@ -1,0 +1,37 @@
+Wymagania na ocenę 3 (wszystkie wymagane)
+Utwórz aplikację umożliwiającą składanie zamówień w formie aplikacji internetowej korzystając z wybranego frameworka dla warstwy widoku (np. Vue, React, Angular). Aplikacja powinna korzystać z API na ocenę 3 stworzonego w poprzednim zadaniu.
+
+Wymagania szczegółowe:
+
+W warstwie prezentacji powinien być wykorzystany framework zapewniający responsywność aplikacji (np. Bootstrap lub Materialize).
+Poszczególne komponenty HTML powinny być ostylowane zgodnie z wymaganiami zastosowanego frameworka.
+Towary powinny być wyświetlane w formie tabeli (nazwa, opis, cena). Powinna istnieć możliwość filtrowania towarów po nazwie i/lub (pole tekstowe) i/lub kategorii (lista rozwijana)
+Dodawanie towarów do koszyka może odbywać się w dowolnej formie, np. poprzez kliknięcie przycisku "Kup" znajdującego się z prawej strony w wierszu tabeli opisującym towar.
+zmianę właściwości towaru (kategoria, cena, waga) - z walidacją
+wyświetlenie niezrealizowanych zamówień (np. w tabeli: data zatwierdzenia, wartość, lista towarów z liczbą zamówionych sztuk) i zmianę stanu zamówienia na ZREALIZOWANE lub ANULOWANE (np. przyciskami)
+wyświetlenie zamówień wg stanu w formie tabeli (data zatwierdzenia, wartość).
+Aplikacja powinna posiadać osobny widok do składania zamówienia. Powinien on składać się z:
+tabeli wyświetlającej zamówione towary (nazwa + liczba jednostek, łączna cena). Dla każdego elementu w powyższej tabeli powinna istnieć możliwość zmiany liczby sztuk towaru (np. dwa przyciski + i - lub pole typu number) i usunięcia towaru z zamówienia.
+formularza umożliwiającego podanie danych kontaktowych (nazwa użytkownika, email, telefon)
+informacji o łącznej cenie towarów w zamówieniu.
+Dane zamówienia powinny być walidowane przed wysłaniem na serwer. W przypadku podania błędnych danych użytkownik powinien być informowany o przyczynie błędu.
+UWAGA: Rozłożenie wszystkich ww. elementów na stronie może być dowolne.
+
+Do informowania o błędach przy zmianie właściwości towaru powinny być w tym przypadku wykorzystane informacje przesyłane z serwera a nie walidacja po stronie klienta.
+
+Wymagania na wyższe oceny (każde wymaganie dodatkowe zwiększa ocenę o 0.5)
+D1. Interfejs dla optymalizacji opisu produktu.
+Użytkownik powinien w formularzu edycji produktu mieć dodatkowy przycisk: "Optymalizuj opis". Po jego kliknięciu powinna następować komunikacja z serwerem, który zwróci zoptymalizowany opis produktu. Zoptymalizowany opis powinien być wstawiony do pola opis produktu. Użytkownik ma mieć możliwość korekty uaktualnionego opisu przed zapisaniem zmian.
+
+D2. Formularz zakładania konta i logowania.
+Przyjmij, że aplikaja posiada domyślne konto pracownika. Nie ma możliwości zakładania nowych kont pracownikom, ale użytkownik może się zarejestrować w sklepie podając nazwę użytkownika i proponowane hasło (potrzebny będzie również dodatkowy endpoint po stronie serwera). Po zarejestrowaniu użytkownik nie powinien być zalogowany - musi się zalogować osobnym formularzem. W aplikacji powinien być zrobiony fallback, czyli przeniesienie użytkownika do strony logowania, jeśli chce skorzystać z zabezpieczonego endpointu.
+
+D3. Inicjalizacja bazy danych.
+Jeśli baza danych nie zawiera żadnych informacji o towarach, powinna być możliwość zainicjalizowania bazy danych przez zalogowanego pracownika, na podstawie przesłanego pliku. Jeśli nie realizujesz wymagania D2 - strona umożliwiająca inicjalizację bazy danych powinna być dostępna dla każdego.
+
+Zawartość pliku powinna być zwalidowana po stronie klienta przed wysłaniem do serwera żądania inicjalizacji bazy danych. Możesz przyjąć, że do serwera przesyłana jest zawartość pliku a nie sam plik.
+
+D4. Formularz dodawania opinii o obsłudze zamówienia.
+Klient powinien mieć możliwość dodania opinii o obsłudze zamówienia. Formularz powinien zawierać pola: ocena (skala 1-5), treść opinii, data. Po dodaniu opinii użytkownik powinien zobaczyć listę wszystkich opinii. Przed próbą wysłania opinii należy upewnić się, że zamówienie jest ZREALIZOWANE lub ANULOWANE, oraz, że opinia nie została już dodana.
+
+Pracownik przeglądając zamówienia powinien widzieć opinię dołączoną przez klienta.

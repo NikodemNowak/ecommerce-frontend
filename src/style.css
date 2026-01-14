@@ -1,0 +1,126 @@
+/* bazowe style - neutralne kolory, bez AI-gradientów */
+
+:root {
+  --primary-color: #2c3e50;
+  --accent-color: #16a085;
+  --warning-color: #f39c12;
+  --danger-color: #c0392b;
+  --light-bg: #f8f9fa;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--light-bg);
+  color: #333;
+}
+
+/* nawigacja */
+.navbar-dark {
+  background-color: var(--primary-color) !important;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* karty */
+.card {
+  border: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+}
+
+/* tabele */
+.table-dark {
+  background-color: var(--primary-color);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0,0,0,0.02);
+}
+
+/* przyciski */
+.btn-success {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.btn-success:hover {
+  background-color: #128c75;
+  border-color: #128c75;
+}
+
+.btn-dark {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-warning {
+  background-color: var(--warning-color);
+  border-color: var(--warning-color);
+}
+
+/* badge */
+.badge.bg-warning {
+  background-color: var(--warning-color) !important;
+}
+
+.badge.bg-success {
+  background-color: var(--accent-color) !important;
+}
+
+.badge.bg-danger {
+  background-color: var(--danger-color) !important;
+}
+
+/* formularze */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.2rem rgba(22, 160, 133, 0.15);
+}
+
+/* alerty */
+.alert-success {
+  background-color: rgba(22, 160, 133, 0.1);
+  border-color: var(--accent-color);
+  color: #0d6350;
+}
+
+/* responsywność */
+@media (max-width: 768px) {
+  .table-responsive {
+    font-size: 0.9rem;
+  }
+  
+  .btn-group-sm .btn {
+    padding: 0.25rem 0.4rem;
+  }
+}
+
+/* animacje */
+.spinner-border {
+  color: var(--accent-color);
+}
+
+/* linki */
+a {
+  color: var(--accent-color);
+}
+
+a:hover {
+  color: #128c75;
+}
+
+/* koszyk - ikona */
+.nav-link .badge {
+  position: relative;
+  top: -2px;
+  margin-left: 4px;
+}
