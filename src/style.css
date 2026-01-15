@@ -124,3 +124,26 @@ a:hover {
   top: -2px;
   margin-left: 4px;
 }
+
+/* opis produktu w tabeli - styl dla HTML */
+.product-description p {
+  margin-bottom: 0.5rem;
+}
+
+.product-description p:last-child {
+  margin-bottom: 0;
+}
+
+.product-description strong {
+  font-weight: 600;
+}
+
+.product-description em {
+  font-style: italic;
+}
+
+.product-description br {
+  display: block;
+  content: "";
+  margin-bottom: 0.25rem;
+}

@@ -81,10 +81,10 @@ function onOpinionAdded() {
             <td>{{ order.approved_at ? new Date(order.approved_at).toLocaleDateString('pl') : '-' }}</td>
             <td>
               <ul class="list-unstyled mb-0 small">
-                <li v-for="item in order.items" :key="item.id">
-                  {{ item.product?.name || `Produkt #${item.product_id}` }} x{{ item.quantity }}
-                </li>
-              </ul>
+                  <li v-for="item in order.items" :key="item.id">
+                    {{ item.product?.name || `Produkt #${item.product_id}` }} ({{ item.quantity }} szt.)
+                  </li>
+                </ul>
             </td>
             <td class="text-end fw-bold">{{ calculateTotal(order.items).toFixed(2) }} zł</td>
             <td>

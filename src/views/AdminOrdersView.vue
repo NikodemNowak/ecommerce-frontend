@@ -102,7 +102,7 @@ async function changeStatus(orderId, newStatus) {
                 <td>
                   <ul class="list-unstyled mb-0 small">
                     <li v-for="item in order.items" :key="item.id">
-                      {{ item.product?.name }} x{{ item.quantity }}
+                      {{ item.product?.name }} ({{ item.quantity }} szt.)
                     </li>
                   </ul>
                 </td>
@@ -160,7 +160,7 @@ async function changeStatus(orderId, newStatus) {
                 <td>
                   <ul class="list-unstyled mb-0 small">
                     <li v-for="item in order.items" :key="item.id">
-                      {{ item.product?.name }} x{{ item.quantity }}
+                      {{ item.product?.name }} ({{ item.quantity }} szt.)
                     </li>
                   </ul>
                 </td>

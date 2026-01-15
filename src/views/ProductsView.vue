@@ -20,10 +20,8 @@ function addToCart(product) {
 }
 
 onMounted(() => {
-  if (authStore.isLoggedIn) {
-    productsStore.fetchProducts()
-    productsStore.fetchCategories()
-  }
+  productsStore.fetchProducts()
+  productsStore.fetchCategories()
 })
 </script>
 
@@ -82,9 +80,9 @@ onMounted(() => {
             </tr>
           </thead>
           <tbody>
-            <tr v-for="product in filteredProducts" :key="product.id">
-              <td>{{ product.name }}</td>
-              <td class="text-muted small">{{ product.description }}</td>
+              <tr v-for="product in filteredProducts" :key="product.id">
+                <td>{{ product.name }}</td>
+                <td class="text-muted small product-description" v-html="product.description"></td>
               <td>
                 <span class="badge bg-secondary">
                   {{ productsStore.categories.find(c => c.id === product.category_id)?.name }}
